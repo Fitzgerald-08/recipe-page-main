@@ -1,0 +1,145 @@
+:root {
+  --clr-primary-700: hsl(14, 45%, 36%);
+  --clr-primary-800: hsl(332, 51%, 32%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(330, 100%, 98%);
+  --clr-neutral-300: hsl(30, 54%, 90%);
+  --clr-neutral-400: hsl(30, 18%, 87%);
+  --clr-neutral-500: hsl(30, 10%, 34%);
+  --clr-neutral-800: hsl(24, 5%, 18%);
+
+  --ff-primary: "Young Serif", sans-serif;
+  --ff-secondary: "Outfit", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-semibold: 700;
+
+  --space-m: clamp(0rem, -7.5rem + 16.6667vi, 7.5rem);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+hr {
+  border-top: 1px solid var(--clr-neutral-400);
+}
+
+.card {
+  color: var(--clr-neutral-500);
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-secondary);
+  background-color: var(--clr-neutral-100);
+  font-size: 16px;
+  max-width: 720px;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.recipe-description {
+  display: grid;
+  gap: 1rem;
+}
+
+.card__title {
+  color: var(--clr-neutral-800);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.preparation-time {
+  background-color: var(--clr-neutral-200);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+}
+
+.preparation-time > p {
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-bold);
+  font-size: 1.35rem;
+}
+
+.preparation-time li,
+.section__list li {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+}
+
+/* IM PROBABLY GONNA CHANGE THE NAME OF THIS CLASS */
+.bold-text {
+  font-weight: var(--fw-semibold);
+}
+
+.section__title {
+  color: var(--clr-primary-700);
+  font-family: var(--ff-primary);
+  font-size: 2rem;
+}
+
+.nutrition-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.nutrition__facts__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--clr-neutral-400);
+  padding-block: 0.75rem;
+}
+
+.nutrition__facts__row p {
+  padding-left: 2rem;
+}
+
+.nutrition__facts__row:last-child {
+  border-bottom: 0;
+}
+
+.nutrition__facts span {
+  color: var(--clr-primary-700);
+  font-weight: var(--fw-semibold);
+}
+
+@media (min-width: 720px) {
+  body {
+    background-color: var(--clr-neutral-300);
+  }
+
+  main {
+    padding: 2rem 0 0;
+  }
+
+  .card {
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: var(--space-m);
+  }
+
+  .card__img {
+    border-radius: 0.5rem;
+  }
+}
